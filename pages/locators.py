@@ -16,3 +16,7 @@ class ProductPageLocators:
     MESSAGE_ABOUT_ADDITION = (By.CSS_SELECTOR, "#messages > .alert:nth-child(1) strong")
     PRODUCT_COST = (By.CSS_SELECTOR, ".col-sm-6 > .price_color")
     MESSAGE_WITH_BASKET_COST = (By.CSS_SELECTOR, "#messages > .alert:nth-child(3) strong")
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")

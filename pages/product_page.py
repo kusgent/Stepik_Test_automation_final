@@ -7,6 +7,9 @@ class ProductPage(BasePage):
         add_link = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         add_link.click()
 
+    def should_be_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.MESSAGE_ABOUT_ADDITION), "Success message is not disappeared"
+
     def should_be_message_about_add_to_basket(self):
         assert self.is_element_present(
             *ProductPageLocators.MESSAGE_ABOUT_ADDITION), "Message about addition product is not presented"
@@ -24,6 +27,3 @@ class ProductPage(BasePage):
     def should_not_be_success_message(self):
         assert self.is_not_element_present(
             *ProductPageLocators.MESSAGE_ABOUT_ADDITION), "Success message is presented, but should not be"
-
-    def should_be_disappeared_success_message(self):
-        assert self.is_disappeared(*ProductPageLocators.MESSAGE_ABOUT_ADDITION), "Success message is not disappeared"
